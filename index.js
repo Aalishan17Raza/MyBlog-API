@@ -18,7 +18,7 @@ const secretKey = process.env.SECRETKEY;
 const port = process.env.PORT;
 const uri = process.env.URI;
 
-app.use(cors({ credentials: true, origin: 'https://myblog-app.onrender.com/' }));
+app.use(cors({ credentials: true, origin: 'https://myblog-app.onrender.com' }));
 app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads', express.static(__dirname + '/uploads'));
