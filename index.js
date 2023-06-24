@@ -13,10 +13,10 @@ const fs = require('fs');
 require('dotenv').config();
 
 
-const saltRounds = process.env.SALTROUNDS;
-const secretKey = process.env.SECRETKEY;
-const port = process.env.PORT;
-const uri = process.env.URI;
+const saltRounds = 10;
+const secretKey = 'k8laja5cq3eqla09pasla3jmyjnd4acn3defa';
+const port = 4000;
+
 
 app.use(cors({ credentials: true, origin: 'https://myblog-app.onrender.com' }));
 app.use(express.json());
