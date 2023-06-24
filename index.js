@@ -17,7 +17,6 @@ const saltRounds = 10;
 const secretKey = 'k8laja5cq3eqla09pasla3jmyjnd4acn3defa';
 const port = 4000;
 
-
 app.use(cors({ credentials: true, origin: 'https://myblog-app.onrender.com' }));
 app.use(express.json());
 app.use(cookieParser());
