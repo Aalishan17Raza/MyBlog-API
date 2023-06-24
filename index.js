@@ -22,7 +22,7 @@ app.use(cors({ credentials: true, origin: 'https://myblog-api.onrender.com' }));
 app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads', express.static(__dirname + '/uploads'));
-mongoose.connect(uri);
+mongoose.connect('mongodb+srv://aalishan69raza:5wUfuLqElBiT60eY@cluster0.dwruyrs.mongodb.net/?retryWrites=true&w=majority');
 
 
 app.post('/register', async (req, res) => {
