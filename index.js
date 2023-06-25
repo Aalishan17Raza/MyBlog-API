@@ -12,7 +12,6 @@ const uploadMiddleWare = multer({ dest: 'uploads/' });
 const fs = require('fs');
 require('dotenv').config();
 
-
 const saltRounds = 10;
 const secretKey = 'k8laja5cq3eqla09pasla3jmyjnd4acn3defa';
 const port = 4000;
@@ -46,7 +45,7 @@ app.post('/login', async (req, res) => {
             //logged in
             jwt.sign({ username, id: userDoc._id }, secretKey, {}, (err, token) => {
                 if (err) res.status(400).json(err);
-                res.cookie('token', token).json({
+                res.cookie('token', token, { sameSite: 'none', secure: true }).json({
                     id: userDoc._id,
                     username
                 });
