@@ -74,7 +74,7 @@ app.get('/profile', (req, res) => {
 
 app.post('/logout', (req, res) => {
     try {
-        res.cookie('token', '').json('ok')
+        res.cookie('token', '', { sameSite: 'none', secure: true }).json('ok')
     } catch (error) {
         console.log(error);
     }
